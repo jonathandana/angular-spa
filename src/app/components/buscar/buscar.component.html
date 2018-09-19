@@ -1,0 +1,17 @@
+<h1 *ngIf="heroes.length == 0">No se encontro nada</h1>
+
+<div *ngIf="heroes.length > 0">
+  <h1>Buscando: {{buscador}}</h1>
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+    <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+      <button (click)="verHeroe(i)"  type="button" class="btn btn-outline-primary btn-block">
+        Ver mas...
+      </button>
+    </div>
+  </div>
+</div>
+</div>
