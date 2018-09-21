@@ -13,11 +13,6 @@ export class HeroesComponent implements OnInit {
 
   constructor( private _heroesServices:HeroesService, private router:Router) {}
 
-  verHeroe( i:number ){
-    this.router.navigate(['/heroe',i]);
-  }
-
-
 
   ngOnInit() {
     this.heroes = this._heroesServices.getHeroes();
