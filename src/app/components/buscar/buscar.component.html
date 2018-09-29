@@ -3,6 +3,6 @@
 <div *ngIf="heroes.length > 0">
   <h1>Buscando: {{buscador}}</h1>
 <div class="card-columns">
-  <app-heroe-tarjeta [index]="i" [heroe]="heroe" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+  <app-heroe-tarjeta [index]="heroe.idx" [heroe]="heroe" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
 </div>
 </div>
